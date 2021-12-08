@@ -1,0 +1,51 @@
+[
+    {
+        "id": 7,
+        "name": "Cera 2400",
+        "type": "supercomputer",
+        "amount": 15,
+        "processor": "Brain 456"
+    },
+    {
+        "id": 3,
+        "name": "MaxEffect 2000",
+        "type": "tabletop",
+        "amount": 5,
+        "processor": "MotorOlè"
+    },
+    {
+        "id": 5,
+        "name": "GameDelux",
+        "type": "pocket computer",
+        "amount": 25,
+        "processor": "BNE"
+    },
+    {
+        "id": 1,
+        "name": "BigFlop Mark II",
+        "type": "gameover",
+        "amount": 30,
+        "processor": "MinPower"
+    },
+    {
+        "id": 2,
+        "name": "Xunil 4.7",
+        "type": "server",
+        "amount": 20,
+        "processor": "PiTron 3"
+    },
+    {
+        "id": 6,
+        "name": "King 3000",
+        "type": "laptop",
+        "amount": 7,
+        "processor": "X-Force"
+    },
+    {
+        "id": 4,
+        "name": "Beast II",
+        "type": "embedded",
+        "amount": 1,
+        "processor": "Selenium II"
+    }
+]
