@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="inventory-display">
+      <h2>List of Computers</h2>
+      <table>
+        <thead>
+          <th>Computer Id</th>
+          <th>Computer Name</th>
+          <th>Computer Type</th>
+          <th>Units</th>
+          <th>Processor</th>
+        </thead>
+        <tbody>
+          <% res.forEach(item => { %>
+          <tr>
+            <td><%= item.id %></td>
+            <td><%= item.name %></td>
+            <td><%= item.type %></td>
+            <td><%= item.amount %></td>
+            <td><%= item.processor %></td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+      <a href="/"><button>Menu</button></a>
+    </div>
+  </body>
+</html>

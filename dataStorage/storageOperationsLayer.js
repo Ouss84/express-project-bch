@@ -33,7 +33,7 @@ module.exports = class storageOperations {
     });
   }
   insert(item) {
-    return new Promise((resolve, reject) => {
+    return new Promise(async (resolve, reject) => {
       if (item) {
         if (!item.id) {
           reject(MESSAGES.NOT_INSERTED());
@@ -50,7 +50,7 @@ module.exports = class storageOperations {
     });
   }
   update(item) {
-    return new Promise((resolve, reject) => {
+    return new Promise(async (resolve, reject) => {
       if (item) {
         if (await updateItem(item)) {
           resolve(MESSAGES.UPDATE_OK(item.id));
@@ -63,15 +63,13 @@ module.exports = class storageOperations {
     });
   }
   remove(id) {
-    return new Promise((resolve, reject) => {
+    return new Promise(async (resolve, reject) => {
       if (!id) {
-        reject(MESSAGES.NOT_FOUND(id));
+        reject(MESSAGES.NOT_FOUND("--empty--"));
+      } else if (await removeItem(id)) {
+        resolve(MESSAGES.REMOVE_OK(id));
       } else {
-        if (await removeItem(id)) {
-          resolve(MESSAGES.REMOVE_OK(id));
-        } else {
-          reject(MESSAGES.NOT_REMOVED(id));
-        }
+        reject(MESSAGES.NOT_REMOVED(id));
       }
     });
   }

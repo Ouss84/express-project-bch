@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>tehtävät</title>
+  <style>
+    
+ #valikko button {
+   width: 20em;
+ }
+
+ section > h2, main>h1 {
+   background-color: beige;
+ }
+
+ @media print {
+    #valikko,
+    #syote,
+    #haku,
+    #kaikki,
+    #virhe {
+      page-break-inside: avoid;
+      page-break-after: always;
+      padding: 10px;
+      height: 420px;
+      border: solid grey 1px;
+    }
+
+    #kaikki {
+      height: 1000px;
+    }
+
+    body {
+      font-size: 10pt;
+    }
+    section {
+      page-break-after: always;
+    }
+    section > div:last-of-type{
+      page-break-after:avoid;
+    }
+ }
+
+ @media screen {
+   #valikko,
+   #syote,
+   #haku,
+   #kaikki,
+   #virhe {
+     page-break-inside: avoid;
+     border: solid gray 1px;
+     padding: 1em;
+     margin: 10px;
+     height: 600px;
+   }
+
+   body {
+     font-size: 12pt;
+   }
+ }
+
+
+ ul.taulu {
+   font-family: monospace;
+   font-weight: bold;
+ }
+
+ input {
+   display: inline-block;
+   height: 20px;
+   border: black solid 2px;
+ }
+
+ label {
+   display: inline-block;
+   width: 150px;
+ }
+
+ .lihavointi {
+   font-weight: bold;
+ }
+
+ div {
+   padding: 10px;
+ }
+
+ .iso {
+   font-size: 16pt;
+ }
+
+ h2 .iso {
+   font-size: 24pt;
+ }
+
+ th,
+ td {
+   padding: 10px;
+   text-align: left;
+ }
+
+ .huom {
+   padding: 1em;
+   border: dashed 1px red;
+ }
+
+ .konsolivalikko>ol>li {
+   margin-left:1em;
+   font-family: monospace;
+ }
+
+ pre, .konsolivalikko>ol {
+   width: 70%;
+   padding: 1em;
+   background-color: lightgray;
+   font-weight: bold;
+ }
+
+ .avain {
+   color:blue;
+   font-weight: bold;
+ }
+
+ .arvo{
+   color:red;
+ }
+
+ .olioalku, .olioloppu, .taulukko{
+   font-weight: bold;
+ }
+ .olio{
+   padding-left:1em;
+   padding-top:0;
+   padding-bottom: 0;
+ }
+
+ .rivi{
+   padding:0;
+ }
+
+ .arvo.varchar::before{
+    content: '\0022';
+ }
+ .arvo.varchar::after {
+   content: '\0022';
+ }
+
+ .jsondata {
+   font-family: monospace;
+ }
+
+ table.csvdata {
+   border-collapse: collapse;
+   border: solid 1px black;
+ }
+
+ table.csvdata th {
+   background-color: lightgrey;
+   border-bottom: 1px solid black;
+ }
+
+ table.csvdata td,
+ table.csvdata th {
+   border-right: 1px solid black;
+   border-left: 1px solid black;
+ }
+
+  .xmldata .elementti,
+  .xmldata .elementtiloppu {
+    padding-left: 1em;
+  }
+
+  .xmldata .kentta {
+    padding-left: 2em;
+  }
+  </style>
+</head>
+  <body>
+    <header>Oussama Bahri</header>
+    <main>
+      <h1> Tasks</h1>
+      <ol>
+      
+          <li>Create a folder for the project</li> 
+      
+          <li>Create json file for the data</li> 
+      
+          <li>Create data access layer for the data</li> 
+      
+          <li>Create server (index.js)</li> 
+      
+          <li>Create webpages</li> 
+      
+          <li>Submit the project</li> 
+      
+          <li>Appendix: Example web pages</li> 
+      
+      </ol>
+      
+      
+        <section class="projektinAlustusEN">
+          <h2>1 Create a folder for the project</h2>
+        
+          <div>
+     Create a folder for the project. Name the folder with
+     <strong>Bahri_Oussama_computer_project</strong>.
+  </div>
+  <div>
+    
+  </div>
+  
+  
+        </section>
+      
+        <section class="json">
+          <h2>2 Create json file for the data</h2>
+        
+        <p>Create a file called <strong>Bahri_Oussama_computers.json</strong></p>
+<div class="jsondata"><span class="taulukko">[</span><div class="olio"><span class="olioalku">{</span><div class="rivi">
+            <span class="avain">"id"</span>:<span class="arvo integer">7</span>, </div><div class="rivi">
+            <span class="avain">"name"</span>:<span class="arvo varchar">Cera 2400</span>, </div><div class="rivi">
+            <span class="avain">"type"</span>:<span class="arvo varchar">supercomputer</span>, </div><div class="rivi">
+            <span class="avain">"amount"</span>:<span class="arvo integer">15</span>, </div><div class="rivi">
+            <span class="avain">"processor"</span>:<span class="arvo varchar">Brain 456</span> </div><span class="olioloppu">}</span>,</div><div class="olio"><span class="olioalku">{</span><div class="rivi">
+            <span class="avain">"id"</span>:<span class="arvo integer">3</span>, </div><div class="rivi">
+            <span class="avain">"name"</span>:<span class="arvo varchar">MaxEffect 2000</span>, </div><div class="rivi">
+            <span class="avain">"type"</span>:<span class="arvo varchar">tabletop</span>, </div><div class="rivi">
+            <span class="avain">"amount"</span>:<span class="arvo integer">5</span>, </div><div class="rivi">
+            <span class="avain">"processor"</span>:<span class="arvo varchar">MotorOlè</span> </div><span class="olioloppu">}</span>,</div><div class="olio"><span class="olioalku">{</span><div class="rivi">
+            <span class="avain">"id"</span>:<span class="arvo integer">5</span>, </div><div class="rivi">
+            <span class="avain">"name"</span>:<span class="arvo varchar">GameDelux</span>, </div><div class="rivi">
+            <span class="avain">"type"</span>:<span class="arvo varchar">pocket computer</span>, </div><div class="rivi">
+            <span class="avain">"amount"</span>:<span class="arvo integer">25</span>, </div><div class="rivi">
+            <span class="avain">"processor"</span>:<span class="arvo varchar">BNE</span> </div><span class="olioloppu">}</span>,</div><div class="olio"><span class="olioalku">{</span><div class="rivi">
+            <span class="avain">"id"</span>:<span class="arvo integer">1</span>, </div><div class="rivi">
+            <span class="avain">"name"</span>:<span class="arvo varchar">BigFlop Mark II</span>, </div><div class="rivi">
+            <span class="avain">"type"</span>:<span class="arvo varchar">gameover</span>, </div><div class="rivi">
+            <span class="avain">"amount"</span>:<span class="arvo integer">30</span>, </div><div class="rivi">
+            <span class="avain">"processor"</span>:<span class="arvo varchar">MinPower</span> </div><span class="olioloppu">}</span>,</div><div class="olio"><span class="olioalku">{</span><div class="rivi">
+            <span class="avain">"id"</span>:<span class="arvo integer">2</span>, </div><div class="rivi">
+            <span class="avain">"name"</span>:<span class="arvo varchar">Xunil 4.7</span>, </div><div class="rivi">
+            <span class="avain">"type"</span>:<span class="arvo varchar">server</span>, </div><div class="rivi">
+            <span class="avain">"amount"</span>:<span class="arvo integer">20</span>, </div><div class="rivi">
+            <span class="avain">"processor"</span>:<span class="arvo varchar">PiTron 3</span> </div><span class="olioloppu">}</span>,</div><div class="olio"><span class="olioalku">{</span><div class="rivi">
+            <span class="avain">"id"</span>:<span class="arvo integer">6</span>, </div><div class="rivi">
+            <span class="avain">"name"</span>:<span class="arvo varchar">King 3000</span>, </div><div class="rivi">
+            <span class="avain">"type"</span>:<span class="arvo varchar">laptop</span>, </div><div class="rivi">
+            <span class="avain">"amount"</span>:<span class="arvo integer">7</span>, </div><div class="rivi">
+            <span class="avain">"processor"</span>:<span class="arvo varchar">X-Force</span> </div><span class="olioloppu">}</span>,</div><div class="olio"><span class="olioalku">{</span><div class="rivi">
+            <span class="avain">"id"</span>:<span class="arvo integer">4</span>, </div><div class="rivi">
+            <span class="avain">"name"</span>:<span class="arvo varchar">Beast II</span>, </div><div class="rivi">
+            <span class="avain">"type"</span>:<span class="arvo varchar">embedded</span>, </div><div class="rivi">
+            <span class="avain">"amount"</span>:<span class="arvo integer">1</span>, </div><div class="rivi">
+            <span class="avain">"processor"</span>:<span class="arvo varchar">Selenium II</span> </div><span class="olioloppu">}</span></div><span class="taulukko">]</span></div>
+        </section>
+      
+        <section class="tietovarastokerrosEN">
+          <h2>3 Create data access layer for the data</h2>
+        
+          <div>Create a datastorage layer with all necessary methods.</div>
+  <h3>Necessary operations:</h3>
+  <div>Your data access layer should have the following operations:
+    <ul class="operaatiot">
+    
+    <li><strong class="iso">get all</strong></li>
+    
+     
+    <li><strong class="iso">get one</strong></li>
+    
+    
+     
+    <li><strong class="iso">insert</strong></li>
+    
+     
+    <li><strong class="iso">update</strong></li>
+    
+     
+    <li><strong class="iso">remove</strong></li>
+    
+    </ul>
+  </div>
+  
+    
+      <div>
+        The data is read dynamically from the data file. 
+        
+        When the data is changed it is saved back to the disk file.
+        
+      </div>
+      
+    
+        </section>
+      
+        <section class="verkkopalvelinEN">
+          <h2>4 Create server (index.js)</h2>
+        
+        <div>
+  Create a server.
+  
+  Server is listening host <strong>localhost:3000</strong>.
+  
+  Main menu can be opened from root route <strong class="iso">/</strong>.
+  Menu should include links to other pages.
+</div>
+        </section>
+      
+        <section class="verkkosivutEN">
+          <h2>5 Create webpages</h2>
+        
+        <div>Create webpages for the following operations:</div>
+<ul class="operaatiot">
+  
+  
+  <li><strong class="iso">get all</strong></li>
+  
+  
+  <li><strong class="iso">get one</strong></li>
+  
+  
+  <li><strong class="iso">insert</strong></li>
+  
+  
+  <li><strong class="iso">update</strong></li>
+  
+  
+  <li><strong class="iso">remove</strong></li>
+  
+  
+</ul>
+<p>
+  
+  Below (Appendix) are a few examples of web pages. Design and implement the main
+  menu and all other necessary pages.
+  </p>
+<p>
+  Design and implement stylesheets for your application.
+</p>
+<p>
+  
+</p>
+        </section>
+      
+        <section class="palautusEN">
+          <h2>6 Submit the project</h2>
+        
+          <div>
+    Submit your project folder
+    <strong>Bahri_Oussama_computer_project</strong>
+    acording to instructions given separately.
+     
+    Remove the <strong>node_modules</strong> folder before submitting.
+    
+    
+    The project folder should include <strong>package.json</strong> file
+    
+  </div>
+  
+  
+    <div>
+      The project folder should also include the data in a json file named as
+      <strong>Bahri_Oussama_computers.json</strong>.
+    </div>
+  
+
+  
+
+  
+        </section>
+      
+        <section class="fullstack_liite">
+          <h2>7 Appendix: Example web pages</h2>
+        
+        <div id="nakymat">
+  <h3>Menu</h3>
+  <div id="valikko">
+    <h1>Menu</h1>
+  
+    <p><button type="button">Get all</button></p>
+  
+    <p><button type="button">Get computer</button></p>
+    
+    <p><button type="button">Insert computer</button></p>
+    
+    <p><button type="button">Update computer </button></p>
+    
+    <p><button type="button">Delete computer</button></p>
+    
+ 
+  </div>
+  
+  <h3>Get all</h3>
+  <div id="kaikki">
+    <div id="haekaikki">
+  <h1>Get all</h1>
+  <table>
+    <thead>
+      <tr>
+        
+          <th>
+            id
+          </th>
+          
+          <th>
+            name
+          </th>
+          
+          <th>
+            type
+          </th>
+          
+          <th>
+            amount
+          </th>
+          
+          <th>
+            processor
+          </th>
+          
+      </tr>
+    </thead>
+    </tbody>
+    
+      <tr>
+        
+          <td>
+            7
+          </td>
+          
+          <td>
+            Cera 2400
+          </td>
+          
+          <td>
+            supercomputer
+          </td>
+          
+          <td>
+            15
+          </td>
+          
+          <td>
+            Brain 456
+          </td>
+          
+      </tr>
+      
+      <tr>
+        
+          <td>
+            3
+          </td>
+          
+          <td>
+            MaxEffect 2000
+          </td>
+          
+          <td>
+            tabletop
+          </td>
+          
+          <td>
+            5
+          </td>
+          
+          <td>
+            MotorOlè
+          </td>
+          
+      </tr>
+      
+      <tr>
+        
+          <td>
+            5
+          </td>
+          
+          <td>
+            GameDelux
+          </td>
+          
+          <td>
+            pocket computer
+          </td>
+          
+          <td>
+            25
+          </td>
+          
+          <td>
+            BNE
+          </td>
+          
+      </tr>
+      
+      <tr>
+        
+          <td>
+            1
+          </td>
+          
+          <td>
+            BigFlop Mark II
+          </td>
+          
+          <td>
+            gameover
+          </td>
+          
+          <td>
+            30
+          </td>
+          
+          <td>
+            MinPower
+          </td>
+          
+      </tr>
+      
+      <tr>
+        
+          <td>
+            2
+          </td>
+          
+          <td>
+            Xunil 4.7
+          </td>
+          
+          <td>
+            server
+          </td>
+          
+          <td>
+            20
+          </td>
+          
+          <td>
+            PiTron 3
+          </td>
+          
+      </tr>
+      
+      <tr>
+        
+          <td>
+            6
+          </td>
+          
+          <td>
+            King 3000
+          </td>
+          
+          <td>
+            laptop
+          </td>
+          
+          <td>
+            7
+          </td>
+          
+          <td>
+            X-Force
+          </td>
+          
+      </tr>
+      
+      <tr>
+        
+          <td>
+            4
+          </td>
+          
+          <td>
+            Beast II
+          </td>
+          
+          <td>
+            embedded
+          </td>
+          
+          <td>
+            1
+          </td>
+          
+          <td>
+            Selenium II
+          </td>
+          
+      </tr>
+      
+        </tbody>
+  </table>
+</div>
+  </div>
+  
+    <h3>Get computer</h3>
+    <div id="haku">
+        <div id="haeyksi">
+    <h1>Query result</h1>
+    
+    <p>id: 7</p>
+    
+    <p>name: Cera 2400</p>
+    
+    <p>type: supercomputer</p>
+    
+    <p>amount: 15</p>
+    
+    <p>processor: Brain 456</p>
+    
+  </div>
+    </div>
+  
+  <h3>Add computer</h3>
+  <div id="syote">
+    <div id="syottolomake">
+  <h1>Add a computer</h1>
+  <form id="lomake" action="#" method="post">
+    
+      <p>
+        <label>id</label>
+        <input type="text" size="1">
+      </p>
+    
+      <p>
+        <label>name</label>
+        <input type="text" size="27">
+      </p>
+    
+      <p>
+        <label>type</label>
+        <input type="text" size="15">
+      </p>
+    
+      <p>
+        <label>amount</label>
+        <input type="text" size="4">
+      </p>
+    
+      <p>
+        <label>processor</label>
+        <input type="text" size="13">
+      </p>
+    
+    <button type="submit">Submit</button>
+  </form>
+</div>
+  </div>
+
+ 
+ <h3>Error page</h3>
+ <div id="virhe">
+       <h1>Error</h1>
+    <p>Error message here</p>
+ </div>
+ 
+</div>
+        </section>
+        
+    </main> 
+  </body>
+</html>
