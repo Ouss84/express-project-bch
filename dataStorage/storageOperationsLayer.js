@@ -38,7 +38,7 @@ module.exports = class storageOperations {
         if (!item.id) {
           reject(MESSAGES.NOT_INSERTED());
         } else if (await getOneItem(item.id)) {
-          reject(MESSAGES.ALREADY_IN_USE(id));
+          reject(MESSAGES.ALREADY_IN_USE(item.id));
         } else if (await addItemToStorage(item)) {
           resolve(MESSAGES.INSERT_OK(item.id));
         } else {

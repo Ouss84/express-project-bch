@@ -45,6 +45,36 @@ app.post("/getComputer", (req, res) => {
     .catch((error) => sendErrorPage(res, error));
 });
 
+app.get("/addAnItem",(req,res)=>res.render("form",{
+  title:"Add an item",
+  header:"Add a new item",
+  action:"/insert",
+  id:{value:"",readonly:""},
+  name:{value:"",readonly:""},
+  type:{value:"",readonly:""},
+  amount:{value:"",readonly:""},
+  processor:{value:"",readonly:""},
+
+}));
+app.post("/insert",(req,res)=>{
+  if(!req.body) res.sendStatus(500);
+  storedData.insert(req.body).then(status=>sendStatusPage(res,status)).catch((error)=>sendErrorPage(res,error));
+});
+app.get("/removeAnItem", (req, res) =>
+  res.render("getOneItem", {
+    title: "Remove Item",
+    header: "Remove this item",
+    action: "/removeAnItem",
+  })
+);
+app.post("/removeAnItem", (req, res) => {
+  if (!req.body) res.sendStatus(500);
+  const itemId = req.body.id;
+  storedData
+    .remove(itemId)
+    .then((status) => sendStatusPage(res, status))
+    .catch((error) => sendStatusPage(res, error));
+});
 // Status Pages
 function sendErrorPage(res, error, title = "Error", header = "Error") {
   sendStatusPage(res, error, title, header);
