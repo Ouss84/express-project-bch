@@ -32,6 +32,7 @@ module.exports = class storageOperations {
       }
     });
   }
+
   insert(item) {
     return new Promise(async (resolve, reject) => {
       if (item) {
@@ -48,7 +49,7 @@ module.exports = class storageOperations {
         reject(MESSAGES.NOT_INSERTED());
       }
     });
-  }
+  } 
   update(item) {
     return new Promise(async (resolve, reject) => {
       if (item) {
@@ -65,7 +66,7 @@ module.exports = class storageOperations {
   remove(id) {
     return new Promise(async (resolve, reject) => {
       if (!id) {
-        reject(MESSAGES.NOT_FOUND("--empty--"));
+        reject(MESSAGES.NOT_FOUND());
       } else if (await removeItem(id)) {
         resolve(MESSAGES.REMOVE_OK(id));
       } else {

@@ -4,13 +4,15 @@
     <meta charset="UTF-8" />
 
     <title><%= title %></title>
+    <link rel="stylesheet" href="/style/styles.css">
   </head>
   <body>
     <h1><%= header %></h1>
+    <div class="form-wrapper">
     <form action="<%= action %>" method="POST">
       <p>
         <label for="id"> Item Id:</label>
-        <input type="text" id="id" name="id" size="3" value="<%= id.value %>" <%= id.readonly %> >
+        <input type="text" id="id" name="id" size="10" value="<%= id.value %>" <%= id.readonly %> >
       </p>
       <p>
         <label for="name"> Item name:</label>
@@ -28,8 +30,9 @@
         <label for="processor"> Processor:</label>
         <input type="text" id="processor" name="processor" size="20" value="<%= processor.value %>" <%= processor.readonly %> >
       </p>
-      <button type="submit">Add Item</button>
+      <button type="submit">Submit</button>
     </form>
     <a href="/"><button>Home</button></a>
+  </div>
   </body>
 </html>

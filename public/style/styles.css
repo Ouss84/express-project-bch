@@ -1,0 +1,129 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.menu-area{
+margin: 5rem;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+button{
+    width: 10rem;
+    padding: 0.5rem;
+    margin: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+button:hover{
+    background-color: rgb(190, 96, 79);
+}
+.landing-page{
+    margin: 0;
+    height: 100vh;
+    background-color: seashell;
+}
+.footer{
+    text-align: center;
+    font-family: sans-serif;
+    margin-top:15rem;
+    font-weight: 800;
+}
+h1,h2{
+    text-align: center;
+    color: #AA0000;
+    font-family: sans-serif;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: seashell;
+  flex-wrap: nowrap;
+  padding: 3rem 2rem;
+  justify-content: center;
+  width: 35vw;
+  border-radius: 5px;
+  margin: 3rem;
+  color: #333;
+  font-family: "Roboto", sans-serif;
+box-shadow: slategray 0 0 5px;
+}
+
+label {
+  display: inline-block;
+  width: 20%;
+  color: #333;
+  font-weight: 700;
+}
+.inventory-display{
+    font-family: sans-serif;
+    height: 100vh;
+   background-color: seashell;
+   display: flex;
+   flex-direction: column;
+}
+table{
+    height: 50vh;
+    margin: 5rem;
+    border: slategrey solid 3px;
+    border-collapse: collapse;
+ 
+}
+th{
+    padding: 2rem;
+}
+th,tbody,td{
+    text-align: center;
+    border: solid 1px slategray;
+}
+.form-wrapper{
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.select-item{
+    font-family: sans-serif;
+    height: 100vh;
+   background-color: seashell;
+   display: flex;
+   flex-direction: column;
+}
+input[readonly]{
+    background-color: lightgray;
+  }
+
+main{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+main form{
+    width:25vw;
+    display: grid;
+}
+main form p{
+    display: flex;
+    justify-content: space-between;
+}
+main form label{
+    width: 4rem;
+}
+p.info{
+    margin:5rem;
+    border: solid rgb(23, 35, 51) 2px;
+    padding: 1rem;
+  }
+  p.error{
+    margin: 5rem;
+    border: solid red 2px;
+    padding: 1rem;
+  }
+  h1.error{
+    color: red;
+  }
