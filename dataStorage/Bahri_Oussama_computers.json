@@ -30,7 +30,7 @@
     {
         "id": 2,
         "name": "Xunil 4.7",
-        "type": "server",
+        "type": "server77",
         "amount": 20,
         "processor": "PiTron 3"
     },
@@ -47,5 +47,12 @@
         "type": "embedded",
         "amount": 1,
         "processor": "Selenium II"
+    },
+    {
+        "id": 555,
+        "name": "qwqwqw",
+        "type": "qwqw",
+        "amount": 16,
+        "processor": "1wwqw"
     }
 ]

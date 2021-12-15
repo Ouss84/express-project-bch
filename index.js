@@ -64,8 +64,8 @@ app.post("/insert", (req, res) => {
   if (!req.body) res.sendStatus(500);
   storedData
     .insert(req.body)
-    .then((status) => sendStatusPage(res, status));
-   
+    .then((status) => sendStatusPage(res, status))
+    .catch((error) => sendErrorPage(res, error));
 });
 
 app.get("/updateAnItem", (req, res) =>

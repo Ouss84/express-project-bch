@@ -65,6 +65,31 @@ label {
    display: flex;
    flex-direction: column;
 }
+.inventory-display a{
+    text-align: center;
+}
+.item-display{
+    /* text-align: center;
+    font-family: sans-serif; */
+    margin: 2rem;
+   
+}
+.item-display p{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    width:30vw;
+    font-family: sans-serif;
+    border:1px solid grey;
+   
+}
+
+.item-display span{
+    font-weight: bold;
+    margin-right: 2rem;
+    
+}
 table{
     height: 50vh;
     margin: 5rem;
@@ -109,7 +134,7 @@ main form{
 }
 main form p{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 main form label{
     width: 4rem;

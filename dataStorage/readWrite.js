@@ -19,7 +19,6 @@ async function writeStorage(storageFile, data) {
     });
     return true;
   } catch (err) {
-    console.log(err);
     return false;
   }
 }

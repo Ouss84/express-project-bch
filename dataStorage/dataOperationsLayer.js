@@ -18,7 +18,7 @@ async function getOneItem(id) {
 async function addItemToStorage(newItem) {
   const data = await readStorage(storageFilePath);
   data.push(toNumber(newItem));
-  await writeStorage(storageFilePath, data);
+  return await writeStorage(storageFilePath, data);
 }
 
 async function updateItem(updatedItem) {

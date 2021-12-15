@@ -66,7 +66,7 @@ module.exports = class storageOperations {
   remove(id) {
     return new Promise(async (resolve, reject) => {
       if (!id) {
-        reject(MESSAGES.NOT_FOUND());
+        reject(MESSAGES.NOT_FOUND("Storage empty!!!"));
       } else if (await removeItem(id)) {
         resolve(MESSAGES.REMOVE_OK(id));
       } else {
